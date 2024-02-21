@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Landing Page</title>
+  <style>
+    body {
+      background-image: url("n.jpg");
+      background-repeat:no-repeat;
+      background-size: 2000px 980px;
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      color: #800000;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-around;
+      padding: 20px;
+    }
+
+    .box {
+      flex: 1;
+      border: 2px solid #fff;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 10px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    img {
+      border-radius: 50%;
+      border: 4px solid lightgrey;
+      box-shadow: 3px 3px 5px #888888;
+    }
+
+    h2 {
+      color: #800000;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+    }
+
+    .social-icons img {
+      margin: 5px;
+    }
+
+  .social-icons a {
+      text-decoration: none;
+    }
+
+   
+
+ 
+  </style>
+</head>
+<body >
+  <h1 style="font-size:300%;"><u>My Profile</u></h1>
+  <div class="container">
+    <div class="box">
+      <h2>Details</h2>
+      <b>Name:</b> Priti Sheoran<br><br>
+      <b>Age:</b> 21<br><br>
+      <b>Location:</b> Bhiwani, Haryana<br><br>
+      <u><b id="toggleContactDetails">Connect via:</b></u><br><br>
+      <div class="social-icons">
+        <a href="#l2"><img src="Linkdn.jpg" height="35" width="30"></a>
+        <a href="#l3"><img src="download.jpg" height="35" width="30"></a>
+        <a href="#l1"><img src="gmail(1).jpg" height="35" width="30"></a>
+      </div>
+    </div>
+
+    <div class="box">
+      <h2>About</h2>
+      <p>
+        Hello and welcome! I am Priti Sheoran, a recent science graduate eager
+        to embark on a fulfilling career in computers.This Landing Page is a 
+        glimpse into my journey, aspirations, and the skills I bring as a budding
+        professional in the world of technology.An innovative, focused, and highly 
+        motivated individual who has the capability to perform well under pressure 
+        with leadership quality and problem-solving attitude.
+        <u><h2>Skills:</h2></u>
+        <ul>
+          <li>Microsoft Office</li>
+          <li>Python</li>
+          <li>HTML</li>
+          <li>CSS</li>
+        </ul>
+      </p>
+    </div>
+
+    <div class="box" style="background-color:rgba(0, 77, 71,0.6);">
+      <center><img src="Passport_Photograph.jpg" height="215" width="220" id="slide"></center><br>
+      <center><b style="font-size:30px; font-family: Times New Roman;">Hello, I am Priti</b></center>
+      <p>
+        Thank you for taking the time to explore my page. I am enthusiastic about the opportunities 
+        that lie ahead and look forward to connecting with professionals who share a similar passion 
+        for <b>WEB DEVELOPMENT<b>.<br><br>
+        <div>
+           <form>
+               <label>Email : </label><input type ="email" name="email">
+               <input type = "button" value = "Submit" id = "emailInput" onclick="submitmail()">
+           </form>
+        </div>
+      </p>
+    </div>
+  </div>
+
+  <script>
+    const images = ["img.png", "Passport_Photograph.jpg"];
+    let currentImageIndex = 0;
+
+    function changeImage() {
+      document.getElementById("slide").src = images[currentImageIndex];
+      currentImageIndex = (currentImageIndex + 1) % images.length;
+    }
+
+    setInterval(changeImage, 3000);
+
+    function submitmail() {
+    const eInput = document.getElementById("emailInput").value;
+    alert("Email submitted " );
+    }
+  </script>
+</body>
+</html>
